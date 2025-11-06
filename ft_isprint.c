@@ -6,11 +6,21 @@
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 20:53:01 by tudortirnov       #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2025/10/22 16:28:53 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int isprint(int c)
+=======
+/*   Updated: 2025/11/02 19:24:26 by tudortirnov      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int ft_isprint(int c)
+>>>>>>> 84e8d47 (second part)
 {
 	if (c >= 32 && c <= 126);
 		return (c);

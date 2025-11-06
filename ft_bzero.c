@@ -6,10 +6,19 @@
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:33:59 by tudortirnov       #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2025/10/22 16:42:37 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+=======
+/*   Updated: 2025/11/02 19:24:58 by tudortirnov      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+>>>>>>> 84e8d47 (second part)
 void    ft_bzero(void *s, size_t n)
 {
 	unsigned char *point = (unsigned char *)s;
