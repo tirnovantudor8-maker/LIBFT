@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 16:33:59 by tudortirnov       #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2025/10/22 16:42:37 by tudortirnov      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-=======
-/*   Updated: 2025/11/02 19:24:58 by tudortirnov      ###   ########.fr       */
+/*   Created: 2025/11/10 20:19:27 by tudortirnov       #+#    #+#             */
+/*   Updated: 2025/11/10 20:49:22 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
->>>>>>> 84e8d47 (second part)
-void    ft_bzero(void *s, size_t n)
+
+char *ft_strdup(const char *s1)
 {
-	unsigned char *point = (unsigned char *)s;
-	size_t i = 0;
-	while(i < n)
+	unsigned char *copy;
+	size_t i;
+	size_t size;
+	
+	i = 0;
+	size = 0;
+
+	while(s1[size] != '\0')
+	size++;
+
+	copy = malloc((size + 1) * sizeof(char));
+
+	if(!copy)
+		return(NULL);
+	
+	while(s1[i] != '\0')
 	{
-		point[i] = 0;
+		s1[i] = copy[i];
 		i++;
 	}
+	copy[i] = '\0';
+	
+	return(copy);	
 }

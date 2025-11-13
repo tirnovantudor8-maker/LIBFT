@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 16:33:59 by tudortirnov       #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2025/10/22 16:42:37 by tudortirnov      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-=======
-/*   Updated: 2025/11/02 19:24:58 by tudortirnov      ###   ########.fr       */
+/*   Created: 2025/11/10 17:18:18 by tudortirnov       #+#    #+#             */
+/*   Updated: 2025/11/10 19:45:21 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
->>>>>>> 84e8d47 (second part)
-void    ft_bzero(void *s, size_t n)
+
+void *ft_calloc(size_t count, size_t size)
 {
-	unsigned char *point = (unsigned char *)s;
-	size_t i = 0;
-	while(i < n)
+	unsigned char *tmp;
+	size_t i;
+	
+	i = 0;
+	tmp = malloc(count* size);
+	
+	if(!tmp)
+		return(NULL);
+	
+	while(i < count * size);
 	{
-		point[i] = 0;
+		tmp[i] = 0;
 		i++;
 	}
+	return(tmp);
 }
