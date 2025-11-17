@@ -6,9 +6,11 @@
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 15:29:10 by tudortirnov       #+#    #+#             */
-/*   Updated: 2025/11/04 17:18:57 by tudortirnov      ###   ########.fr       */
+/*   Updated: 2025/11/16 18:24:47 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

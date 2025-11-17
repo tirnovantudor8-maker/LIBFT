@@ -6,7 +6,7 @@
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:21:21 by tudortirnov       #+#    #+#             */
-/*   Updated: 2025/11/08 15:18:16 by tudortirnov      ###   ########.fr       */
+/*   Updated: 2025/11/17 00:22:48 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ j = 0;
 
 
 		
-}
+
 
 
 
@@ -67,13 +67,13 @@ j = 0;
 
 
 
-int main()
-{
-	const char *haystack = "abc";
-	const char *needle = "bc";
-	size_t len = 5;
-	char *output;
-	output = ft_strnst(haystack, needle, len);
-	return(0);
+// int main()
+// {
+// 	const char *haystack = "abc";
+// 	const char *needle = "bc";
+// 	size_t len = 5;
+// 	char *output;
+// 	output = ft_strnst(haystack, needle, len);
+// 	return(0);
 	
-}
+// }

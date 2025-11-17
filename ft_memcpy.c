@@ -6,19 +6,10 @@
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:45:41 by tudortirnov       #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2025/10/22 17:42:54 by tudortirnov      ###   ########.fr       */
+/*   Updated: 2025/11/17 00:21:09 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-=======
-/*   Updated: 2025/11/02 19:24:20 by tudortirnov      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "libft.h"
-
->>>>>>> 84e8d47 (second part)
 void    *ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char *tmp_src;
@@ -45,6 +36,5 @@ void    *ft_memcpy(void *dst, const void *src, size_t n)
 		*tmp_dst++ = *tmp_src++;
 		x++;
 	}
-	return(dst);
->>>>>>> 84e8d47 (second part)
+	return(dst); 84e8d47 (second part)
 }
