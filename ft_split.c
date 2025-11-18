@@ -6,7 +6,7 @@
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 20:36:01 by tudortirnov       #+#    #+#             */
-/*   Updated: 2025/11/17 18:16:04 by tudortirnov      ###   ########.fr       */
+/*   Updated: 2025/11/18 17:44:21 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ char **ft_split(const char *s, char c)
 {
 char **result;
 int words;
-int i = 0;
-int start = 0;
-int end = 0;
-int w = 0;
+int i;
+int start;
+int w;
+
+i = 0;
+w = 0;
 
 if (!s)
      return NULL;
@@ -37,12 +39,11 @@ while (s[i] && w < words)
 {
 	while (s[i] && s[i] == c)
     	i++;
-start = i;
+	start = i;
 
 	while (s[i] && s[i] != c)
 		i++;
-	end = i;
-	result[w] = fill_word(s, start, end);
+	result[w] = fill_word(s, start, i);
 	if (!result[w])
 	{
 		ft_free(result, w);
@@ -76,7 +77,7 @@ while(s[i])
 return (count);
 }
 
-char *fill_word(const char *s, int start, int end)
+static char *fill_word(const char *s, int start, int end)
 {
 int i;
 char *word;
@@ -84,6 +85,8 @@ i = 0;
 
 word = malloc((end - start + 1) * sizeof(char));
 
+if(!word)
+	return(NULL);
 while( start < end)
 {
     word[i] = s[start];
@@ -96,42 +99,12 @@ return(word);
 
 static void ft_free(char **arr, int count)
 {
-int i = 0;
-while (i < count)
-{
-    free(arr[i]);
-i++;
+	int i = 0;
+	while (i < count)
+	{
+    	free(arr[i]);
+	i++;
+	}
+	free(arr);
 }
-free(arr);
-}
 
-
-// int main(void)
-// {
-//     char **words;
-//     int i = 0;
-
-//     words = ft_split("Hello,world,this,is,C!", ',');
-//     if (!words)
-//     {
-//         printf("Allocation failed\n");
-//         return 1;
-//     }
-
-//     while (words[i])
-//     {
-//         printf("Word %d: %s\n", i, words[i]);
-//         i++;
-//     }
-
-//     // Eliberăm memoria
-//     i = 0;
-//     while (words[i])
-//     {
-//         free(words[i]);
-//         i++;
-//     }
-//     free(words);
-
-//     return 0;
-// }
