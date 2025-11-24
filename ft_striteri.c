@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 16:33:59 by tudortirnov       #+#    #+#             */
-/*   Updated: 2025/11/24 17:28:46 by tudortirnov      ###   ########.fr       */
+/*   Created: 2025/11/20 17:22:36 by tudortirnov       #+#    #+#             */
+/*   Updated: 2025/11/20 17:30:25 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
-
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned char *point = (unsigned char *)s;
-	size_t i = 0;
-	while(i < n)
-	{
-		point[i] = 0;
-		i++;
-	}
+	unsigned int i;
+	
+	i = 0;
+
+	if(!s || !f)
+		return(NULL);
+	
+	while(s[i])
+{
+	f(i, &s[i]);
+	i++;
+}
+	
 }

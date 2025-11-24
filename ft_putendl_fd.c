@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 16:33:59 by tudortirnov       #+#    #+#             */
-/*   Updated: 2025/11/24 17:28:46 by tudortirnov      ###   ########.fr       */
+/*   Created: 2025/11/24 16:03:52 by tudortirnov       #+#    #+#             */
+/*   Updated: 2025/11/24 16:15:47 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
-
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void ft_putendl_fd(char *s, int fd)
 {
-	unsigned char *point = (unsigned char *)s;
-	size_t i = 0;
-	while(i < n)
-	{
-		point[i] = 0;
-		i++;
-	}
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }
+
+
+// int main()
+// {
+// 	char *s = "tudor";
+// 	int blabla = 1;
+// 	ft_putendl_fd(s, blabla);
+// 	return(0);
+// }

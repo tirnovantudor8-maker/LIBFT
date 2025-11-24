@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 16:33:59 by tudortirnov       #+#    #+#             */
-/*   Updated: 2025/11/24 17:28:46 by tudortirnov      ###   ########.fr       */
+/*   Created: 2025/11/24 17:39:08 by tudortirnov       #+#    #+#             */
+/*   Updated: 2025/11/24 17:39:21 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
-
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void ft_putchar_fd(char c, int fd)
 {
-	unsigned char *point = (unsigned char *)s;
-	size_t i = 0;
-	while(i < n)
-	{
-		point[i] = 0;
-		i++;
-	}
+	write(fd, &c, 1);
 }
