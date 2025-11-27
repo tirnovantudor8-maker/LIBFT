@@ -6,7 +6,7 @@
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:33:59 by tudortirnov       #+#    #+#             */
-/*   Updated: 2025/11/24 17:28:46 by tudortirnov      ###   ########.fr       */
+/*   Updated: 2025/11/25 16:24:09 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *point = (unsigned char *)s;
-	size_t i = 0;
-	while(i < n)
+	unsigned char	*point;
+	size_t			i;
+
+	i = 0;
+	point = (unsigned char *)s;
+	while (i < n)
 	{
 		point[i] = 0;
 		i++;

@@ -6,13 +6,13 @@
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:57:08 by tudortirnov       #+#    #+#             */
-/*   Updated: 2025/11/16 18:23:51 by tudortirnov      ###   ########.fr       */
+/*   Updated: 2025/11/24 20:19:25 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (c);

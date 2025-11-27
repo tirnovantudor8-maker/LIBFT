@@ -6,22 +6,13 @@
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:22:33 by tudortirnov       #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2025/10/22 16:28:26 by tudortirnov      ###   ########.fr       */
+/*   Updated: 2025/11/24 22:55:12 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-=======
-/*   Updated: 2025/11/02 19:24:49 by tudortirnov      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "libft.h"
-
->>>>>>> 84e8d47 (second part)
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c<= 122))
-    	return (c);
-    return(0);
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (c);
+	return (0);
 }

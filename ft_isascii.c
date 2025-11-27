@@ -6,15 +6,15 @@
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 20:39:31 by tudortirnov       #+#    #+#             */
-/*   Updated: 2025/11/16 18:23:22 by tudortirnov      ###   ########.fr       */
+/*   Updated: 2025/11/24 22:55:51 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int    ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);
-    return (0);
+	return (0);
 }

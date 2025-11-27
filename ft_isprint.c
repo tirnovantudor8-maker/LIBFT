@@ -5,24 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 20:53:01 by tudortirnov       #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2025/10/22 16:28:53 by tudortirnov      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-int isprint(int c)
-=======
-/*   Updated: 2025/11/02 19:24:26 by tudortirnov      ###   ########.fr       */
+/*   Created: 2025/11/24 19:19:48 by tudortirnov       #+#    #+#             */
+/*   Updated: 2025/11/24 23:05:45 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
->>>>>>> 84e8d47 (second part)
+int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126);
+	if (c >= 32 && c <= 126)
 		return (c);
 	return (0);
 }

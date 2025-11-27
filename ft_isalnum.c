@@ -5,25 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 19:19:31 by tudortirnov       #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2025/10/22 16:28:01 by tudortirnov      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-=======
-/*   Updated: 2025/11/02 19:24:53 by tudortirnov      ###   ########.fr       */
+/*   Created: 2025/11/24 19:34:16 by tudortirnov       #+#    #+#             */
+/*   Updated: 2025/11/25 17:38:35 by tudortirnov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
->>>>>>> 84e8d47 (second part)
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-	if ((c >= 65 && c <= 90) 
-    	|| (c >= 97 && c<= 122)
-    	&& (c >= 48 && c <= 57))
-    	return(c);
-    return (0);
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
+		return (1);
+	return (0);
 }
