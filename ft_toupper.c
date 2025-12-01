@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
+/*   By: titudor <titudor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:24:57 by tudortirnov       #+#    #+#             */
-/*   Updated: 2025/11/25 16:17:42 by tudortirnov      ###   ########.fr       */
+/*   Updated: 2025/12/01 20:51:29 by titudor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

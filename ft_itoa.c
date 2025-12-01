@@ -3,67 +3,60 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
+/*   By: titudor <titudor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 18:35:42 by tudortirnov       #+#    #+#             */
-/*   Updated: 2025/11/24 20:46:07 by tudortirnov      ###   ########.fr       */
+/*   Updated: 2025/11/29 21:10:41 by titudor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	int_len(long n);
-static void	fill_str(long nbr, char *str, int len);
+static int	ft_memcal(int n);
 
 char	*ft_itoa(int n)
 {
-	long	nbr;
-	int		len;
-	char	*str;
+	int		mem_space;
+	char	*result;
+	int		flag;
 
-	nbr = n;
-	len = int_len(nbr);
-	str = malloc(len + 1);
-	if (!str)
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	flag = 0;
+	mem_space = ft_memcal(n);
+	result = malloc(mem_space + 1);
+	if (!result)
 		return (NULL);
-	str[len] = '\0';
-	fill_str(nbr, str, len);
 	if (n < 0)
-		str[0] = '-';
-	return (str);
+	{
+		flag = -1;
+		n = n * -1;
+	}
+	result[mem_space] = '\0';
+	while (--mem_space > -1)
+	{
+		result[mem_space] = (n % 10) + 48;
+		n = n / 10;
+	}
+	if (flag == -1)
+		result[0] = '-';
+	return (result);
 }
 
-static int	int_len(long n)
+static int	ft_memcal(int n)
 {
-	int	len;
+	int	sigfig;
 
-	len = 0;
-	if (n <= 0)
-		len++;
-	while (n != 0)
+	sigfig = 1;
+	if (n < 0)
 	{
-		n /= 10;
-		len++;
+		n = n * -1;
+		sigfig++;
 	}
-	return (len);
-}
-
-static void	fill_str(long nbr, char *str, int len)
-{
-	int	i;
-
-	i = len - 1;
-	if (nbr == 0)
+	while (n > 9)
 	{
-		str[0] = '0';
-		return ;
+		n = n / 10;
+		sigfig++;
 	}
-	if (nbr < 0)
-		nbr = -nbr;
-	while (nbr > 0)
-	{
-		str[i] = (nbr % 10) + '0';
-		i--;
-		nbr /= 10;
-	}
+	return (sigfig);
 }

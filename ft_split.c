@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tudortirnovan <tudortirnovan@student.42    +#+  +:+       +#+        */
+/*   By: titudor <titudor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 20:36:01 by tudortirnov       #+#    #+#             */
-/*   Updated: 2025/11/25 18:43:17 by tudortirnov      ###   ########.fr       */
+/*   Updated: 2025/12/01 20:45:04 by titudor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ static int	count_word(const char *s, char c)
 
 static char	*fill_word(const char *s, int start, int end)
 {
-	int		i;
 	char	*word;
+	int		i;
 
 	word = malloc((end - start + 1) * sizeof(char));
 	if (!word)
@@ -44,9 +44,7 @@ static char	*fill_word(const char *s, int start, int end)
 	i = 0;
 	while (start < end)
 	{
-		word[i] = s[start];
-		i++;
-		start++;
+		word[i++] = s[start++];
 	}
 	word[i] = '\0';
 	return (word);
@@ -58,14 +56,11 @@ static void	ft_free(char **arr, int count)
 
 	i = 0;
 	while (i < count)
-	{
-		free(arr[i]);
-		i++;
-	}
+		free(arr[i++]);
 	free(arr);
 }
 
-static void	process_words(const char *s, char c, char **result, int words)
+static int	process_words(const char *s, char c, char **result, int words)
 {
 	int	i;
 	int	w;
@@ -84,10 +79,11 @@ static void	process_words(const char *s, char c, char **result, int words)
 		if (!result[w])
 		{
 			ft_free(result, w);
-			return ;
+			return (0);
 		}
 		w++;
 	}
+	return (1);
 }
 
 char	**ft_split(const char *s, char c)
@@ -101,7 +97,8 @@ char	**ft_split(const char *s, char c)
 	result = malloc((words + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
-	process_words(s, c, result, words);
+	if (!process_words(s, c, result, words))
+		return (NULL);
 	result[words] = NULL;
 	return (result);
 }
